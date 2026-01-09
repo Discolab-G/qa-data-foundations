@@ -1,29 +1,22 @@
-# Qa-Data-Foundations
+# QA Practice Portfolio
 
-Repository with an objective of being a project to work on to learn Git and GitHub, with an objective of working as QA and/or in Data Analysis. 
-Repository with minimal arborescence to work on. 
+This repository contains my personal QA training work.
+The goal is to practice professional bug reporting, exploratory testing,
+and QA communication using industry standards.
 
-## Objectif (fr)
+## Contents
+- Bug reports written in Jira-style format
+- Exploratory testing notes
+- Release readiness checklists
 
-Ce projet a pour but de :
-- s’entraîner avec Git et GitHub
-- manipuler des branches
-- effectuer des commits réguliers
-- tester des modifications simples sur le code
+## Tools & Skills Practiced
+- Manual testing
+- Bug reporting
+- Regression analysis
+- QA communication
+- Git & GitHub
 
----
-
-## Technologies utilisées (fr)
-
-- Langage : Python 3
-- Librairies : standard library uniquement
-- Outil de versioning : Git
-- Plateforme : GitHub
-
----
-
-## Exécution du projet (fr)
-
-1. Cloner le dépôt :
-```bash
-https://github.com/Discolab-G/qa-data-foundations.git
+## Disclaimer
+All issues documented here are created for training purposes
+and were not reported to the actual product owners.
+>>>>>>> bb86f66f6ac6304c69f4a0541046f3dab8459c0d
