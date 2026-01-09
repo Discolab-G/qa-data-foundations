@@ -1,27 +1,28 @@
-## Save button available while sign in informations are missing
+## Save button enabled with incomplete required sign-up fields
 
 # Type
 bug
 
 # Severity 
-Minor
+Medium
 
 # Priority 
 High 
 
 # Environment 
-Environment : Website with account 
-Browser : Chrome Version 143.0.7499.193 (Official build) (64 bits)
-OS : Édition	Windows 11 Professionnel Version	24H2
-Machine : Desktop computer
+Environment : Website 
+Browser : Chrome Version 143.0.7499.193
+OS : Windows 11 Pro
+Device : Desktop 
 
 # Description
 While creating an account on the website with the option "sign-in", the "save" button turn green with only the name give, while all other necessary informations were not given.
 
 # Steps to reproduce
-1 : Go to "XXX" website
-2 : Selecte, on the top right corner, the "sign-in" option. 
-3 : Only enter your name, while leaving all other informations blank. 
+1 : Go to https://www.privatesportshop.fr/
+2 : Select "sign-in" (top-right corner)
+3 : Fill only the name field
+4 : Leave all the other required fields empty
 
 # Expected result 
 The "save" button should stay grey, until all necessary informations are given. 
@@ -30,7 +31,7 @@ The "save" button should stay grey, until all necessary informations are given.
 Only entering a name is enought to turn green the "save" button
 
 # Reproducability 
-5 / 5
+Always 5 / 5
 
 # Impact 
 - User frustration
@@ -39,9 +40,13 @@ Only entering a name is enought to turn green the "save" button
 - Lack of user signed-in 
 
 # Attachments 
-Screen shot of the "save" button while informing form 
+Screenshot showing the "Save" button enabled while required fields are empty
 ![Save button](../attachments/Save-button.png)
 
 # Note / Additional information
+
+# Regression risk : 
+- Other forms using the same validation logic (login, profil update) 
+- Front-end form validation framework
 
 
