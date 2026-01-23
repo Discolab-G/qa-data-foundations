@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search Display</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        input, button { padding: 10px; margin: 5px; }
+        img { max-width: 100%; height: auto; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Image Search Tool</h1>
+    <p>This program demonstrates how to integrate and use a web API to search for images on the internet and display them locally.</p>
+
+    <!-- Form for user input -->
+    <input type="text" id="search-input" placeholder="Enter search term (e.g., cats)">
+    <button onclick="searchImage()">Search Image</button>
+
+    <!-- Area to display the image -->
+    <div id="image-container"></div>
+
+    <script>
+        // Function to handle the search
+        function searchImage() {
+            // Get the search term from the input field
+            const query = document.getElementById('search-input').value.trim();
+
+            // Check if the user entered something
+            if (!query) {
+                alert('Please enter a search term.');
+                return;
+            }
+
+            // Clear previous image
+            document.getElementById('image-container').innerHTML = '<p>Loading...</p>';
+
+            // API integration: Using Pixabay API for image search
+            // Pixabay is a free image API that allows searching for images
+            // To use it, you need an API key. For this demo, we're using a sample key.
+            // In a real application, get your own key from https://pixabay.com/api/docs/
+            const apiKey = 'YOUR_PIXABAY_API_KEY'; // Replace with your actual API key
+            const apiUrl = `https://pixabay.com/api/?key=${apiKey}&q=${encodeURIComponent(query)}&image_type=photo&per_page=3`;
+
+            // Using the Fetch API to make a request to the external API
+            // Fetch is a modern JavaScript method to make HTTP requests
+            fetch(apiUrl)
+                .then(response => {
+                    // Check if the response is successful (status 200-299)
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok: ' + response.statusText);
+                    }
+                    // Parse the response as JSON
+                    // JSON (JavaScript Object Notation) is a lightweight data format
+                    // It's used to exchange data between server and client
+                    // The API returns data in JSON format, which we convert to a JavaScript object
+                    return response.json();
+                })
+                .then(data => {
+                    // The JSON response from Pixabay contains an array of image objects in 'hits'
+                    // Example structure: { "total": 123, "totalHits": 123, "hits": [ { "id": 123, "webformatURL": "url", ... }, ... ] }
+                    // We access the 'hits' array to get the images
+                    if (data.hits && data.hits.length > 0) {
+                        // Get the first image from the results
+                        const image = data.hits[0];
+                        // Display the image using the 'webformatURL' (medium size)
+                        document.getElementById('image-container').innerHTML = `
+                            <img src="${image.webformatURL}" alt="${image.tags}">
+                            <p>Tags: ${image.tags}</p>
+                        `;
+                    } else {
+                        // No images found
+                        document.getElementById('image-container').innerHTML = '<p>No images found for that search term.</p>';
+                    }
+                })
+                .catch(error => {
+                    // Handle any errors that occurred during the fetch or JSON parsing
+                    console.error('Error fetching image:', error);
+                    document.getElementById('image-container').innerHTML = '<p>Error loading image. Check console for details.</p>';
+                });
+        }
+
+        // Explanation of key concepts:
+        // 1. API (Application Programming Interface): A set of rules that allows different software to communicate.
+        //    Here, we're using Pixabay's API to search for images without building our own image database.
+        //
+        // 2. HTTP Requests: We use 'fetch' to send a GET request to the API URL.
+        //    The URL includes parameters like the API key and search query.
+        //
+        // 3. JSON Handling: APIs often return data in JSON format. We use response.json() to parse it into a usable object.
+        //    JSON is text-based and easy to read/write, consisting of key-value pairs.
+        //
+        // 4. Asynchronous Code: Fetch is asynchronous, so we use .then() to handle the response when it arrives.
+        //    This prevents the page from freezing while waiting for the network request.
+        //
+        // 5. Error Handling: Always include .catch() to handle network errors or invalid responses.
+        //
+        // 6. Security Note: In production, never hardcode API keys in client-side code. Use server-side proxy.
+        //    For learning, replace 'YOUR_PIXABAY_API_KEY' with a real key from Pixabay.
+    </script>
+</body>
+</html>
