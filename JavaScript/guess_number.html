@@ -105,6 +105,7 @@
     guessField.value = "";
     guessField.focus();
   }
+  guessSubmit.addEventListener("click", checkGuess);
     function showHint() {
         alert(`Le nombre est entre ${randomNumber - 10} et ${randomNumber + 10}.`);
     }
