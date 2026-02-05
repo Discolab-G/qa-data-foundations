@@ -242,14 +242,3 @@ const qaInAgileDevOpsContext = {
     acquisition: 40,
     description: 'Understanding of QA role in Agile and DevOps environments, including continuous testing, shift-left practices, and cross-functional collaboration.',
 };
-
-// Définition de la compétence primaire "CI/CD and DevOps Tools"
-/* 
-Major changes to be made or structure to be accomodated to update the CI/CD and DevOps Tools competency with the following subskills:
-- CI/CD Concepts and Best Practices
-- Jenkins and Pipeline Automation 
-- Docker and Containerization
-- Kubernetes and Orchestration
-- GitHub Actions and Workflow Automation
-- Monitoring and Logging in DevOps
-*/  
