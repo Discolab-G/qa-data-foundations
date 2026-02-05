@@ -1,0 +1,66 @@
+<!DOCTYPE html>     <!-- Define language type and version -->
+<html lang="en">    <!--  Define language of the document -->
+    <head>
+        <meta charset="UTF-8">                                  <!-- Define character encoding -->
+        <title>Gabriel Samson - Skills Dashboard</title>        <!-- Title of the webpage -->
+    </head>
+<body>
+
+    <header>
+        <button type = "button">☰</button>
+        <h1>Dashboard Gabriel Samson</h1>
+        <button type ="button">?</button>
+    </header>
+
+    <main class="stage">
+      <section class = "skills-overview" aria-label="Skills overview">
+        
+        <h2 class ="section-title">Skills overview</h2>
+        <p class="section-intro">
+            This dashboard provides an overview of my current skill acquisition progress. The objective of this training is to reach a Quality Assurance Automation Engineer level, and ultimately, position.
+        </p>
+
+        <!-- Container for the center + the ring around it-->
+        <div class="orbit">
+
+        <!-- Center : Project -->
+        <article class="project-center" aria-label="Project overview">
+            <p class="center-label center-label--top">Project</p> 
+            <div class="avatar" aria-hidden="true">GS</div>
+            <p class="center-label center-label--left">Languages</p>
+            <p class="center-label center-label--right">Tools</p>
+            <p class="center-label center-label--bottom">Concepts</p>
+        </article>
+        
+
+        <!-- Rings around (manual version for now)-->
+         <div class="rings" aria-label="Primary skills">
+            <button class="ring" type="button">
+                <span class="ring-node" aria-hidden="true"></span>
+                <span class="ring-text">QA automation</span>
+                <span class="ring-percent">35%</span>
+            </button>
+            
+            <button class="ring" type="button">
+                <span class="ring-node" aria-hidden="true"></span>
+                <span class="ring-text">JavaScript</span>
+                <span class="ring-percent">15%</span>
+            </button>
+
+            <button class="ring" type="button">
+                <span class="ring-node" aria-hidden="true"></span>
+                <span class="ring-text">HTML</span>
+                <span class="ring-percent">10%</span>
+            </button>    
+         </div>
+        </div>
+      </section>
+    </main>    
+
+
+    <footer>
+      Footer
+    </footer>
+
+ </body>
+ </html>
