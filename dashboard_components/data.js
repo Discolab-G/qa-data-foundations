@@ -9,7 +9,7 @@ const projectQA = {
     { refId: 'TEST_METHOD', coefficient: 20 },
     { refId: 'CICD', coefficient: 15 },
     { refId: 'HTML_CSS', coefficient: 8 }
-  ]
+  ],
   niveauCalcule: null // A mettre à jour avec la logique de calcul appropriée 
 };
 
@@ -19,21 +19,21 @@ const javascript = {
   label: 'JavaScript',
   type: 'language',
   subskills: [
-    {refID: 'JS_SYNTAX', coefficient: 10, acquisition: 0},
-    {refID: 'JS_FUNCTIONS', coefficient: 15, acquisition: 0},
-    {refID: 'JS_DOM', coefficient: 18, acquisition: 0},
-    {refID: 'JS_DATA_STRUCTURES', coefficient: 20, acquisition: 0},
-    {refID: 'JS_ASYNC', coefficient: 17, acquisition: 0},
-    {refID: 'JS_DEBUGGING', coefficient: 12, acquisition: 0}
-  ]
+    {refId: 'JS_SYNTAX', coefficient: 10, acquisition: 0},
+    {refId: 'JS_FUNCTIONS', coefficient: 15, acquisition: 0},
+    {refId: 'JS_DOM', coefficient: 18, acquisition: 0},
+    {refId: 'JS_DATA_STRUCTURES', coefficient: 20, acquisition: 0},
+    {refId: 'JS_ASYNC', coefficient: 17, acquisition: 0},
+    {refId: 'JS_DEBUGGING', coefficient: 12, acquisition: 0}
+  ],
   proof_of_acquisition: {
     type: 'project',
-    title: 'Self-training dashboard'
-    repository: null // A mettre à jour avec le lien vers le repository du projet de self-training
-    description: null // A mettre à jour avec une description du projet de self-training et des compétences démontrées
-    date_completed: null // A mettre à jour avec la date de complétion du projet de self-training 
+    title: 'Self-training dashboard',
+    repository: null, // A mettre à jour avec le lien vers le repository du projet de self-training
+    description: null, // A mettre à jour avec une description du projet de self-training et des compétences démontrées
+    date_completed: null, // A mettre à jour avec la date de complétion du projet de self-training 
     demonstrates: ['JS_SYNTAX', 'JS_FUNCTIONS', 'JS_DOM', 'JS_DATA_STRUCTURES', 'JS_ASYNC', 'JS_DEBUGGING']  
-  }
+  },
   niveauCalcule: null // A mettre à jour avec la logique de calcul appropriée 
 };
 
@@ -97,21 +97,21 @@ const cypress = {
     label: 'Cypress',
     type: 'tool',
     subskills: [
-      {refID: 'CYPRESS_STRUCTURE', coefficient: 15, acquisition: 0},
-      {refID: 'CYPRESS_SELECTORS', coefficient: 20, acquisition: 0},
-      {refID: 'CYPRESS_API', coefficient: 18, acquisition: 0},
-      {refID: 'CYPRESS_CUSTOM', coefficient: 12, acquisition: 0},
-      {refID: 'CYPRESS_CICD', coefficient: 10, acquisition: 0},
-      {refID: 'JS', coefficient: 70, acquisition: null } // Référence à la compétence JavaScript
-    ]
-    proof of acquisition: {
+      {refId: 'CYPRESS_STRUCTURE', coefficient: 15, acquisition: 0},
+      {refId: 'CYPRESS_SELECTORS', coefficient: 20, acquisition: 0},
+      {refId: 'CYPRESS_API', coefficient: 18, acquisition: 0},
+      {refId: 'CYPRESS_CUSTOM', coefficient: 12, acquisition: 0},
+      {refId: 'CYPRESS_CICD', coefficient: 10, acquisition: 0},
+      {refId: 'JS', coefficient: 70, acquisition: null } // Référence à la compétence JavaScript
+    ],
+    proof_of_acquisition: {
       type: 'project',
       title: null, // A mettre à jour avec le titre du projet de test automatisé utilisant Cypress
       repository: null, // A mettre à jour avec le lien vers le repository du projet de test automatisé utilisant Cypress
       description: null, // A mettre à jour avec une description du projet de test automatisé utilisant Cypress et des compétences démontrées
       date_completed: null, // A mettre à jour avec la date de complétion du projet de test automatisé utilisant Cypress
       demonstrates: ['CYPRESS_STRUCTURE', 'CYPRESS_SELECTORS', 'CYPRESS_API', 'CYPRESS_CUSTOM', 'CYPRESS_CICD', 'JS']
-    }
+    },
     niveauCalcule: null // A mettre à jour avec la logique de calcul appropriée 
 };    
 
@@ -166,16 +166,16 @@ const testMethodologies = {
     label: 'Test Methodologies',
     type: 'concept',
     subskills: [
-      {refID: 'TEST_FUNDAMENTALS', coefficient: 15, acquisition: 65},
-      {refID: 'TEST_DESIGN', coefficient: 22, acquisition: 45},
-      {refID: 'TEST_STRATEGY', coefficient: 18, acquisition: 35},
-      {refID: 'TEST_DEFECT', coefficient: 12, acquisition: 55},
-      {refID: 'TEST_AUTOMATION_STRATEGY', coefficient: 20, acquisition: 25},
-      {refID: 'TEST_AGILE', coefficient: 13, acquisition: 40}
-    ]
-    proof of acquisition: {
-      type: 'certifcation_and_appplication',
-      certifiation: {
+      {refId: 'TEST_FUNDAMENTALS', coefficient: 15, acquisition: 65},
+      {refId: 'TEST_DESIGN', coefficient: 22, acquisition: 45},
+      {refId: 'TEST_STRATEGY', coefficient: 18, acquisition: 35},
+      {refId: 'TEST_DEFECT', coefficient: 12, acquisition: 55},
+      {refId: 'TEST_AUTOMATION_STRATEGY', coefficient: 20, acquisition: 25},
+      {refId: 'TEST_AGILE', coefficient: 13, acquisition: 40}
+    ],
+    proof_of_acquisition: {
+      type: 'certification and application',
+      certification: {
         name: 'ISTQB Foundation Level',
         date: null,
         credential_url: null // A mettre à jour avec le lien vers la certification ISTQB Foundation Level obtenue
@@ -184,7 +184,8 @@ const testMethodologies = {
       project: 'Self-training dashboard',
       repository: null, // A mettre à jour avec le lien vers le repository du projet de self-training démontrant l'application pratique des méthodologies de test
       description: 'Application of test design techniques and automation strategy in real project'
-    },
+    }
+},
     niveauCalcule: null // A mettre à jour avec la logique de calcul appropriée 
 };
 
@@ -248,14 +249,14 @@ const cicdIntegrationAndReporting = {
     label: 'CI/CD Integration and Repotring',
     type: 'tool',
     subskills: [
-      {refID: 'CICD_GIT_GITHUB', coefficient: 25, acquisition: 0},
-      {refID: 'CICD_CONCEPTS', coefficient: 18, acquisition: 0},
-      {refID: 'CICD_PIPELINE', coefficient: 22, acquisition: 0},
-      {refID: 'CICD_TESTING', coefficient: 20, acquisition: 0},
-      {refID: 'CICD_DEPLOYMENT', coefficient: 10, acquisition: 0},
-      {refID: 'CICD_MONITORING', coefficient: 12, acquisition: 0},
-    ]
-    proof of acquisition: {
+      {refId: 'CICD_GIT_GITHUB', coefficient: 25, acquisition: 0},
+      {refId: 'CICD_CONCEPTS', coefficient: 18, acquisition: 0},
+      {refId: 'CICD_PIPELINE', coefficient: 22, acquisition: 0},
+      {refId: 'CICD_TESTING', coefficient: 20, acquisition: 0},
+      {refId: 'CICD_DEPLOYMENT', coefficient: 10, acquisition: 0},
+      {refId: 'CICD_MONITORING', coefficient: 12, acquisition: 0},
+    ],
+    proof_of_acquisition: {
         type : 'project',
         title: 'Self_training dashboard CI/CD Pipeline',
         repository: null, // A mettre à jour avec le lien vers le repository du projet de self-training démontrant l'intégration CI/CD
@@ -266,7 +267,7 @@ const cicdIntegrationAndReporting = {
             'Test report generation and artifact storage',
             'Automated deployment on main branch'
         ],
-        demonstrates_subskills: ['CICD_GIT_GITHUB', 'CICD_CONCEPTS', 'CICD_PIPELINE', 'CICD_TESTING', 'CICD_DEPLOYMENT', 'CICD_MONITORING']
+        demonstrates_subskills: ['CICD_GIT_GITHUB', 'CICD_CONCEPTS', 'CICD_PIPELINE', 'CICD_TESTING', 'CICD_DEPLOYMENT', 'CICD_MONITORING'],
         date_completed: null // A mettre à jour avec la date de complétion du projet de self-training démontrant l'intégration CI/CD
     },
     niveauCalcule: null // A mettre à jour avec la logique de calcul appropriée
@@ -279,7 +280,7 @@ const cicdGitAndVersionControl = {
     type: 'subskill',
     acquisition: 0,
     description: 'Proficiency in Git version control including branching strategies, commit management, merge conflict resolution, and collaborative workflows.',
-};)
+};
 
 // Définition du subskill CI/CD Concepts and Tools
 const cicdConceptsAndPrinciples = {
@@ -332,13 +333,13 @@ const htmlCss = {
     label: 'HTML and CSS',
     type: 'language',
     subskills: [
-      {refID: 'HTML_STRUCTURE', coefficient: 20, acquisition: 0},
-      {refID: 'CSS_SELECTORS', coefficient: 30, acquisition: 0},
-      {refID: 'CSS_LAYOUT', coefficient: 15, acquisition: 0},
-      {refID: 'DEVTOOLS', coefficient: 25, acquisition: 0},
-      {refID: 'HTML_ACCESSIBILITY', coefficient: 10, acquisition: 0}
+      {refId: 'HTML_STRUCTURE', coefficient: 20, acquisition: 0},
+      {refId: 'CSS_SELECTORS', coefficient: 30, acquisition: 0},
+      {refId: 'CSS_LAYOUT', coefficient: 15, acquisition: 0},
+      {refId: 'DEVTOOLS', coefficient: 25, acquisition: 0},
+      {refId: 'HTML_ACCESSIBILITY', coefficient: 10, acquisition: 0}
     ],
-    proof of acquisition: {
+    proof_of_acquisition: {
         type: 'project',
         title: 'Self-training dashboard',
         repository: null, // A mettre à jour avec le lien vers le repository du projet de self-training démontrant les compétences en HTML et CSS
