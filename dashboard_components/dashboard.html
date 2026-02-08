@@ -2,14 +2,18 @@
 <html lang="en">    <!--  Define language of the document -->
     <head>
         <meta charset="UTF-8">                                  <!-- Define character encoding -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Gabriel Samson - Skills Dashboard</title>        <!-- Title of the webpage -->
+        <link rel="stylesheet" href="styles.css">
     </head>
 <body>
 
     <header>
         <button type = "button">☰</button>
         <h1>Dashboard Gabriel Samson</h1>
-        <button type ="button">?</button>
+        <button type="button" class="help-btn">?</button>
     </header>
 
     <main class="stage">
@@ -26,7 +30,10 @@
         <!-- Center : Project -->
         <article class="project-center" aria-label="Project overview">
             <p class="center-label center-label--top">Project</p> 
-            <div class="avatar" aria-hidden="true">GS</div>
+            <div class="avatar">
+                <img class="avatar-img" src="profile.jpg" alt="Portrait of Gabriel Samson">
+                <span class="avatar-fallback" aria-hidden="true">GS</span>
+            </div>
             <p class="center-label center-label--left">Languages</p>
             <p class="center-label center-label--right">Tools</p>
             <p class="center-label center-label--bottom">Concepts</p>
