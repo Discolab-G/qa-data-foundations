@@ -19,11 +19,4 @@ Change from Claude to GPT on HTML task start, due to limit of utilisation.
 gpt exemple of how to redact all codes put inside new X_gpt.x files on the same folder. 
 End of first version of the HTML file
 To come tommorow : putting in place a first version of the CSS. -> Either by the main point (the center) or by the headbar (better). 
-
-## Jour 4 
-
-Not lot of things done, but first visual is out. 
-
-## Jour 5
-
-Imput mostly done, need to place everything on the webpage now. 
+Carefull : Their are mistakes in the data.js file ! It will need correction. 
