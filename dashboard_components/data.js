@@ -1,14 +1,14 @@
 // Définition du projet QA avec les jalons et coefficients
 const projectQA = {
   id: 'QA',
-  libelle: 'QA_automation',
+  label: 'QA Automation',
   type: 'project',
-  jalons: [
-    { refId: 'CYPRESS', coefficient: 25 },
-    { refId: 'JS', coefficient: 22 },
-    { refId: 'TEST_METHOD', coefficient: 20 },
-    { refId: 'CICD', coefficient: 15 },
-    { refId: 'HTML_CSS', coefficient: 8 }
+  subskills: [
+    { refId: 'CYPRESS', coefficient: 25, acquisition: null },
+    { refId: 'JS', coefficient: 22, acquisition: null },
+    { refId: 'TEST_METHOD', coefficient: 20, acquisition: null },
+    { refId: 'CICD', coefficient: 15, acquisition: null },
+    { refId: 'HTML_CSS', coefficient: 8, acquisition: null }
   ],
   niveauCalcule: null // A mettre à jour avec la logique de calcul appropriée 
 };
@@ -19,10 +19,10 @@ const javascript = {
   label: 'JavaScript',
   type: 'language',
   subskills: [
-    {refId: 'JS_SYNTAX', coefficient: 10, acquisition: 0},
-    {refId: 'JS_FUNCTIONS', coefficient: 15, acquisition: 0},
+    {refId: 'JS_SYNTAX', coefficient: 10, acquisition: 70},
+    {refId: 'JS_FUNCTIONS', coefficient: 15, acquisition: 20},
     {refId: 'JS_DOM', coefficient: 18, acquisition: 0},
-    {refId: 'JS_DATA_STRUCTURES', coefficient: 20, acquisition: 0},
+    {refId: 'JS_DATA_STRUCTURES', coefficient: 20, acquisition: 50},
     {refId: 'JS_ASYNC', coefficient: 17, acquisition: 0},
     {refId: 'JS_DEBUGGING', coefficient: 12, acquisition: 0}
   ],
@@ -393,4 +393,55 @@ const accessibilityAndBestPractices = {
     type: 'subskill',
     acquisition: 0,
     description: 'Awareness of accessibility principles, ARIA attributes, semantic HTML usage, and their impact on application testability and quality.',
+};
+
+export const primarySkills = [
+  projectQA,
+  javascript,
+  cypress,
+  testMethodologies,
+  cicdIntegrationAndReporting,
+  htmlCss
+];
+
+export const skillsById = {
+  QA: projectQA,
+  JS: javascript,
+  CYPRESS: cypress,
+  TEST_METHOD: testMethodologies,
+  CICD: cicdIntegrationAndReporting,
+  HTML_CSS: htmlCss,
+
+  JS_SYNTAX: syntaxAndFundamentals,
+  JS_FUNCTIONS: functionsAndScope,
+  JS_DOM: domManipulation,
+  JS_DATA_STRUCTURES: dataStructuresAndIteration,
+  JS_ASYNC: asynchronousProgrammingAndAPI,
+  JS_DEBUGGING: debuggingAndBestPractices,
+
+  CYPRESS_STRUCTURE: cypressTestStructure,
+  CYPRESS_SELECTORS: cypressSelectors,
+  CYPRESS_API: cypressApiTesting,
+  CYPRESS_CUSTOM: cypressCustomCommands,
+  CYPRESS_CICD: cypressCICD,
+
+  TEST_FUNDAMENTALS: testFundamentals,
+  TEST_DESIGN: testDesignTechniques,
+  TEST_STRATEGY: testStrategyAndPlanning,
+  TEST_DEFECT: defectManagementAndReporting,
+  TEST_AUTOMATION_STRATEGY: automationStrategyAndBestPractices,
+  TEST_AGILE: qaInAgileDevOpsContext,
+
+  CICD_GIT_GITHUB: cicdGitAndVersionControl,
+  CICD_CONCEPTS: cicdConceptsAndPrinciples,
+  CICD_PIPELINE: cicdPipelineConfigurationAndAutomation,
+  CICD_TESTING: cicdAutomatedTestingIntegration,
+  CICD_DEPLOYMENT: cicdDeploymentAndReleaseManagement,
+  CICD_MONITORING: cicdMonitoringAndReporting,
+
+  HTML_STRUCTURE: htmlStructureAndSemantics,
+  CSS_SELECTORS: cssSelectorsAndSpecificity,
+  CSS_LAYOUT: cssLayoutFundamentals,
+  DEVTOOLS: developerToolsAndDebugging,
+  HTML_ACCESSIBILITY: accessibilityAndBestPractices,
 };
