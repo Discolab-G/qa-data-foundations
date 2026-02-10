@@ -19,9 +19,3 @@ As such, my use of LMM (in proof projects) are :
  - To correct 
 
 Every line of code in this folder is understood, developed and validated by me. 
-
-# Files explanation
-
-HTML_CSS :
-Objective : Creating a new webpage, linked to existing dashboard webpage, to serve as a QA playground and a supportive place for futur proof to come. 
-Means : 
