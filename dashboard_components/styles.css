@@ -62,7 +62,7 @@ header h1 {
   transform: translateX(-50%);
 
   margin: 0;
-  font-size: 20px;
+  font-size: 50px;
   font-weight: 600;
   color: var(--color-primary);
 }
