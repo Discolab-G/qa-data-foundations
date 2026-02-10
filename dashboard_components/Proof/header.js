@@ -23,12 +23,6 @@ const helpPages = {
       </p>
       <button class="help-link" data-target="how_full">View more</button>
 
-      <h3>How was this made?</h3>
-      <p>
-        This project was built as part of a self-training initiative combining
-        JavaScript learning and QA automation concepts.
-      </p>
-      <button class="help-link" data-target="tech_full">View more</button>
     `
   },
 
