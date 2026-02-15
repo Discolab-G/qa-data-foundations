@@ -60,3 +60,55 @@ document.addEventListener("keydown", (event) => {
     closeAllMenus();
   }
 });
+
+// -------- Deuxième partie : On créé un outil de Bug Report (que l'on va appeler Mini Bug report) --------
+
+// Attribution des variables
+const testStatus = document.getElementById("Result");
+const taskInput = document.getElementById("taskInput");
+const saveButton = document.getElementById("saveButton");
+const now = new Date();
+const bugDescription = document.getElementById("taskInputDescription");
+const selectPriority = document.getElementById("prioritySelect");
+const selectStatus = document.getElementById("statusSelect");
+const selectSeverity = document.getElementById("selectSeverity");
+const container = document.getElementById("container");
+
+// Création des tables de stockages des bugs reports
+const bugReports1 = {
+    id : Date.now(),
+    date: now,
+    title: taskInput.value,
+    description: taskInputDescription.value,
+    priority: selectPriority.value,
+    status: selectStatus.value,
+    severity: selectSeverity.value
+}
+
+const bugReports = [];
+
+// Ajout d'un écouteur d'événement pour le clic sur le bouton
+boutonTest.addEventListener("click", function() {
+    //code à exécuter lorsque le bouton est cliqué
+    console.log("Button clicked!");
+});
+
+saveButton.addEventListener("click", function() {
+    //code à exécuter lorsque le bouton est cliqué
+    console.log(Date.now);
+    console.log(now);
+    console.log(taskInput.value);
+    console.log(bugDescription.value);
+    console.log(selectPriority.value);
+    console.log(selectStatus.value);
+    console.log(selectSeverity.value);
+    bugReports.push(bugReports1);
+    console.log(bugReports);
+    console.log("new bug report saved");
+    const accuserDeReception = documentFragment.createElement("p");
+        accuserDeReception.textContent = "Bug report saved!";
+        divapp.appendChild(accuserDeReception);
+
+});
+
+

@@ -50,12 +50,48 @@
                 <span class="code-popover">
                     <button type="button" class="code-button" id ="codeButtonCSS" aria-label="View related code section">&#60;/&#62;</button>
                     <span class="code-menu hidden">
-                        <a class="code-link-html" href="https://github.com/Discolab-G/qa-data-foundations/blob/main/dashboard_components/Proof/HTML_evidence.html#L36-L58" target="_blank" rel="noopener noreferrer">HTML</a>
+                        <a class="code-link-html" href="https://github.com/Discolab-G/qa-data-foundations/blob/main/dashboard_components/Proof/HTML_evidence.html#L36-L60" target="_blank" rel="noopener noreferrer">HTML</a>
                         <a class="code-link-css" href="https://github.com/Discolab-G/qa-data-foundations/blob/main/dashboard_components/Proof/CSS_evidence.css#L197-L223" target="_blank" rel="noopener noreferrer">CSS</a>
                     </span> 
                 </span>    
             </p>
             </div>
+        </section>
+
+
+        <section class="JS-part" aira-label="JS-part">
+            <h2 class="title-h2">JS_Evidence
+            <span class="code-popover">
+                <button type="button" class="code-button" id ="codeButtonJS" aria-label="View related code section">&#60;/&#62;</button>
+                <span class="code-menu hidden">
+                    <a class="code-link-html" href="TOENTERLINK" target="_blank" rel="noopener noreferrer">HTML</a>
+                    <a class="code-link-js" href="TOENTERLINK" target="_blank" rel="noopener noreferrer">JS</a>
+                </span>    
+            </span>
+            </h2>
+
+            <input id="taskInput" type="text" placeholder="Enter bug title">
+            <input id="taskInputDescription" type="text" placeholder="Enter bug description">
+            <select id="prioritySelect" aria-label="Select bug priority">
+                <option value="" disabled selected>Select priority</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <select id="statusSelect" aria-label="Select bug status">
+                <option value="" disabled selected>Select status</option>
+                <option value="open">Open</option>
+                <option value="inProgress">In Progress</option>
+                <option value="closed">Closed</option>
+            </select>
+            <select id="selectSeverity" aria-label="Select bug severity">
+                <option value="" disabled selected>Select severity</option>
+                <option value="minor">Minor</option>
+                <option value="major">Major</option>
+                <option value="critical">Critical</option>
+            </select>
+            <button type="button" class="saveButton" id="saveButton" aria-label="save bug title" >Save bug report</button>
+            <div id="container"></div>
 
         </section>
     </main>
