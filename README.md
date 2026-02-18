@@ -1,4 +1,6 @@
-## Welcome to my skill dashboard 
+## README of my skill dashboard : https://discolab-g.github.io/qa-data-foundations/
+
+# Welcome to my skill dashboard 
 
 This dashboard is a webapp reachable with this link : https://discolab-g.github.io/qa-data-foundations/
 
