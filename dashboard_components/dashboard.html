@@ -25,10 +25,29 @@
 <div class="help-overlay" id="helpOverlay" hidden></div>
 
     <header>
-        <button type = "button">☰</button>
+        <button type="button" class="menu-btn" id="menuOpen" aria-label="Open menu">☰</button>
         <h1>Dashboard Gabriel Samson</h1>
         <button type="button" class="help-btn">?</button>
     </header>
+<!-- Menu panel -->
+<aside class="menu-panel" id="menuPanel" aria-hidden="true">
+  <div class="menu-header">
+    <h2 class="menu-title">Navigation</h2>
+    <button type="button" class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+  </div>
+
+  <nav class="menu-links" aria-label="Project links">
+    <a class="menu-link" href="./dashboard.html">Skills dashboard</a>
+    <a class="menu-link menu-link--primary" href="./Proof/HTML_evidence.html" target="_blank" rel="noopener">
+      Proof of acquisition
+    </a>
+    <a class="menu-link" href="https://github.com/Discolab-G/qa-data-foundations" target="_blank" rel="noopener">
+      Repository
+    </a>
+  </nav>
+</aside>
+
+<div class="menu-overlay" id="menuOverlay" hidden></div>
 
 <main class="stage">
   <section class="skills-overview" aria-label="Skills overview">

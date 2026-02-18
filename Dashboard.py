@@ -17,3 +17,16 @@ with socketserver.TCPServer(("", PORT), Handler) as httpd:
     print(f"Dashboard running at {url}")
     webbrowser.open(url)
     httpd.serve_forever()
+
+import subprocess
+import sys
+
+def main():
+    # Lance Proof.py dans un second processus
+    subprocess.Popen([sys.executable, "Proof.py"])
+
+    # Puis lance le dashboard (le code actuel de dashboard.py)
+    # ... ton code existant ici ...
+
+if __name__ == "__main__":
+    main()

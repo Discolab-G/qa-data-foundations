@@ -11,14 +11,32 @@
       <!-- Copy of dashboard page 1 header, for cosistency across pages. -->
     <body>
         <header>
-            <button type = "button" class="menu-button" aria-label="openMenu" id="menuOpen">☰</button>
+            <button type = "button" class="menu-btn" aria-label="Open menu" id="menuOpen">☰</button>
             <h1>Dashboard Evidences</h1>
             <button type="button" class="help-btn" aria-label="showHelp" id="helpOpen">?</button>
         </header>
-    
+        <!-- Menu panel -->
+        <aside class="menu-panel" id="menuPanel" aria-hidden="true">
+        <div class="menu-header">
+            <h2 class="menu-title">Navigation</h2>
+            <button type="button" class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+        </div>
+
+        <nav class="menu-links" aria-label="Project links">
+            <a class="menu-link menu-link--primary" href="../dashboard.html">Back to dashboard</a>
+            <a class="menu-link" href="./proof.html">Proof of acquisition</a>
+            <a class="menu-link" href="https://github.com/Discolab-G/qa-data-foundations" target="_blank" rel="noopener">
+            Repository
+            </a>
+        </nav>
+        </aside>
+
+    <div class="menu-overlay" id="menuOverlay" hidden></div>
+
+
     <div class="help-overlay" id="helpOverlay" hidden></div>
     
-    
+        
         <!-- Copy of help explanation panel, providing evidence files details. -->
     <aside class="help-panel" id="helpPanel" aria-hidden="true"> 
      
@@ -92,6 +110,10 @@
             </select>
             <button type="button" class="saveButton" id="saveButton" aria-label="save bug title" >Save bug report</button>
             <div id="container"></div>
+            <button type="button" class="listButton" id="listButton" aria-labal="show bug list">Show bug list</button>
+            <div id="list"></div>
+            <input id="delete" type="text" placeholder="enter title of the bug to delete">
+            <button type="button" class="deleteButton" id="deleteButton" aria-label="delete">Delete</button>
 
         </section>
     </main>

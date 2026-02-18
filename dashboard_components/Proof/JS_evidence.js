@@ -67,48 +67,86 @@ document.addEventListener("keydown", (event) => {
 const testStatus = document.getElementById("Result");
 const taskInput = document.getElementById("taskInput");
 const saveButton = document.getElementById("saveButton");
-const now = new Date();
 const bugDescription = document.getElementById("taskInputDescription");
 const selectPriority = document.getElementById("prioritySelect");
 const selectStatus = document.getElementById("statusSelect");
 const selectSeverity = document.getElementById("selectSeverity");
 const container = document.getElementById("container");
+const listButton = document.getElementById("listButton");
+const list = document.getElementById("list");
+const deleteInput = document.getElementById("delete");
+const deleteButton = document.getElementById("deleteButton");
 
-// Création des tables de stockages des bugs reports
-const bugReports1 = {
-    id : Date.now(),
-    date: now,
-    title: taskInput.value,
-    description: taskInputDescription.value,
-    priority: selectPriority.value,
-    status: selectStatus.value,
-    severity: selectSeverity.value
+// Stockage
+const STORAGE_KEY = "bugReports";
+
+// Table en mémoire
+let bugReports = [];
+
+// ---------- Fonction d'affichage (réutilisable) ----------
+function renderList() {
+    const listSpot = document.getElementById("list");
+    listSpot.innerHTML = "";
+
+    for (let i = 0; i < bugReports.length; i++) {
+        const p = document.createElement("p");
+        p.textContent = bugReports[i][1];
+        listSpot.appendChild(p);
+    }
 }
 
-const bugReports = [];
+// ---------- Sauvegarder un nouveau bug ----------
+saveButton.addEventListener("click", function () {
+    // Nouveau "bug" 
+    const bugReports1 = [
+        Date.now(),                  // [0] 
+        taskInput.value,             // [1] 
+        bugDescription.value,        // [2] 
+        selectPriority.value,        // [3] 
+        selectStatus.value,          // [4] 
+        selectSeverity.value         // [5] 
+    ];
 
-// Ajout d'un écouteur d'événement pour le clic sur le bouton
-boutonTest.addEventListener("click", function() {
-    //code à exécuter lorsque le bouton est cliqué
-    console.log("Button clicked!");
-});
-
-saveButton.addEventListener("click", function() {
-    //code à exécuter lorsque le bouton est cliqué
-    console.log(Date.now);
-    console.log(now);
-    console.log(taskInput.value);
-    console.log(bugDescription.value);
-    console.log(selectPriority.value);
-    console.log(selectStatus.value);
-    console.log(selectSeverity.value);
+    // On le met en mémoire puis stockage du nouveau tableau
     bugReports.push(bugReports1);
-    console.log(bugReports);
-    console.log("new bug report saved");
-    const accuserDeReception = documentFragment.createElement("p");
-        accuserDeReception.textContent = "Bug report saved!";
-        divapp.appendChild(accuserDeReception);
+    const savedTable = JSON.stringify(bugReports);
+    localStorage.setItem(STORAGE_KEY, savedTable);
 
+    // afficher la liste après save
+    renderList();
 });
+
+// Message "saved" 
+saveButton.addEventListener("click", function () {
+    const accuserDeReception = document.createElement("p");
+    accuserDeReception.textContent = "Bug report saved!";
+    container.appendChild(accuserDeReception);
+});
+
+// ---------- SHOW BUG LIST ----------
+listButton.addEventListener("click", function () {
+  const backStorage = localStorage.getItem(STORAGE_KEY);
+
+  // Si vide, vide. 
+  bugReports = backStorage ? JSON.parse(backStorage) : [];
+
+  renderList();
+});
+
+// ---------- DELETE (par id) ----------
+deleteButton.addEventListener("click", function () {
+  const idToDelete = Number(deleteInput.value);
+
+  // Si l'input n'est pas un nombre valide, on ne fait rien
+  if (!Number.isFinite(idToDelete)) return;
+
+  // id 
+  bugReports = bugReports.filter(bug => bug[0] !== idToDelete);
+
+  // Re-sauvegarde + re-render
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(bugReports));
+  renderList();
+});
+
 
 
