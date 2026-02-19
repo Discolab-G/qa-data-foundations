@@ -88,32 +88,45 @@
             </span>
             </h2>
 
-            <input id="taskInput" type="text" placeholder="Enter bug title">
-            <input id="taskInputDescription" type="text" placeholder="Enter bug description">
-            <select id="prioritySelect" aria-label="Select bug priority">
-                <option value="" disabled selected>Select priority</option>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
-            <select id="statusSelect" aria-label="Select bug status">
-                <option value="" disabled selected>Select status</option>
-                <option value="open">Open</option>
-                <option value="inProgress">In Progress</option>
-                <option value="closed">Closed</option>
-            </select>
-            <select id="selectSeverity" aria-label="Select bug severity">
-                <option value="" disabled selected>Select severity</option>
-                <option value="minor">Minor</option>
-                <option value="major">Major</option>
-                <option value="critical">Critical</option>
-            </select>
-            <button type="button" class="saveButton" id="saveButton" aria-label="save bug title" >Save bug report</button>
-            <div id="container"></div>
-            <button type="button" class="listButton" id="listButton" aria-labal="show bug list">Show bug list</button>
-            <div id="list"></div>
-            <input id="delete" type="text" placeholder="enter title of the bug to delete">
-            <button type="button" class="deleteButton" id="deleteButton" aria-label="delete">Delete</button>
+            <div class="bug-module">
+                <input id="taskInput" type="text" placeholder="Enter bug title">
+                <input id="taskInputDescription" type="text" placeholder="Enter bug description">
+
+                <select id="prioritySelect" aria-label="Select bug priority">
+                    <option value="" disabled selected>Select priority</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <select id="statusSelect" aria-label="Select bug status">
+                    <option value="" disabled selected>Select status</option>
+                    <option value="open">Open</option>
+                    <option value="inProgress">In Progress</option>
+                    <option value="closed">Closed</option>
+                </select>
+
+                <select id="selectSeverity" aria-label="Select bug severity">
+                    <option value="" disabled selected>Select severity</option>
+                    <option value="minor">Minor</option>
+                    <option value="major">Major</option>
+                    <option value="critical">Critical</option>
+                </select>
+
+                <button type="button" class="saveButton" id="saveButton">Save bug report</button>
+
+                <div id="container"></div>
+
+                <button type="button" class="listButton" id="listButton">Show bug list</button>
+
+                <div id="list"></div>
+
+                <div class="bug-module__delete">
+                    <input id="delete" type="text" placeholder="enter title of the bug to delete">
+                    <button type="button" class="deleteButton" id="deleteButton">Delete</button>
+                </div>
+            </div>
+
 
         </section>
     </main>

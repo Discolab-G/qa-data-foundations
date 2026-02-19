@@ -282,7 +282,7 @@ header .help-btn:hover {
 
 /* Starting point of the main content*/
 section {
-    background-color: #f4fafb;
+    background-color: #112c53;
     padding : 40px 20px;
 }
 
@@ -367,4 +367,174 @@ section {
 .footer {
     background-color: #f4fafb;
 }
+
+   /* ----------------------- BUG REPORT MODULE -----------------------*/
+
+.bug-module {
+  
+  --bug-bg: #f4fafb;
+  --bug-text: #112c53;
+
+  background: var(--bug-bg);
+  color: var(--bug-text);
+
+  /* centered card */
+  width: min(1100px, 100%);
+  margin: 24px auto;
+  padding: 18px 18px 22px;
+  border-radius: 14px;
+
+  border: 1px solid rgba(17, 44, 83, 0.18);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ---- Top  ---- */
+.bug-module > input,
+.bug-module > select,
+.bug-module > button.saveButton {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 8px 10px 0 0;
+}
+
+/* Inputs & selects */
+.bug-module input,
+.bug-module select {
+  height: 40px;
+  padding: 8px 12px;
+  border-radius: 10px;
+
+  background: #fff;
+  color: var(--bug-text);
+  border: 1px solid rgba(17, 44, 83, 0.30);
+
+  font-size: 14px;
+  outline: none;
+}
+
+/* nicer widths */
+.bug-module #taskInput { min-width: 200px; }
+.bug-module #taskInputDescription { min-width: 260px; }
+.bug-module #prioritySelect,
+.bug-module #statusSelect,
+.bug-module #selectSeverity { min-width: 150px; }
+
+/* Focus visible */
+.bug-module input:focus,
+.bug-module select:focus {
+  border-color: rgba(17, 44, 83, 0.65);
+  box-shadow: 0 0 0 3px rgba(17, 44, 83, 0.18);
+}
+
+/* Buttons */
+.bug-module button {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+
+  border: 1px solid rgba(17, 44, 83, 0.35);
+  background: #ffffff;
+  color: var(--bug-text);
+
+  transition: transform 0.05s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bug-module button:hover {
+  background: rgba(17, 44, 83, 0.06);
+}
+
+.bug-module button:active {
+  transform: translateY(1px);
+}
+
+/* Primary action: Save */
+.bug-module .saveButton {
+  background: var(--bug-text);
+  color: #fff;
+  border-color: var(--bug-text);
+  box-shadow: 0 10px 18px rgba(17, 44, 83, 0.18);
+}
+
+.bug-module .saveButton:hover {
+  background: rgba(17, 44, 83, 0.92);
+}
+
+/* Secondary: show list */
+.bug-module .listButton {
+  margin-top: 14px;
+}
+
+/* Saved message container */
+.bug-module #container {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.bug-module #container p {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(17, 44, 83, 0.16);
+}
+
+/* List area */
+.bug-module #list {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+/* If list items are <div> rows (with a delete button per line) */
+.bug-module #list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  background: #ffffff;
+  border: 1px solid rgba(17, 44, 83, 0.16);
+  border-radius: 12px;
+  padding: 12px 12px;
+}
+
+.bug-module #list > div p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--bug-text);
+}
+
+
+.bug-module #list > p {
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid rgba(17, 44, 83, 0.16);
+  border-radius: 12px;
+  padding: 12px 12px;
+  font-weight: 600;
+  color: var(--bug-text);
+}
+
+
+.bug-module__delete {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bug-module .deleteButton {
+  border-color: rgba(172, 0, 53, 0.55);
+  color: #ac0035;
+}
+
+.bug-module .deleteButton:hover {
+  background: rgba(172, 0, 53, 0.08);
+}
+
+
 
