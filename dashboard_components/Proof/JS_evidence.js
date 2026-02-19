@@ -133,20 +133,31 @@ listButton.addEventListener("click", function () {
   renderList();
 });
 
-// ---------- DELETE (par id) ----------
-deleteButton.addEventListener("click", function () {
-  const idToDelete = Number(deleteInput.value);
+// suprimer un élément de la liste
+function renderList() {
+  const listSpot = document.getElementById("list");
+  listSpot.innerHTML = "";
 
-  // Si l'input n'est pas un nombre valide, on ne fait rien
-  if (!Number.isFinite(idToDelete)) return;
+  for (let i = 0; i < bugReports.length; i++) {
+    const row = document.createElement("div");
 
-  // id 
-  bugReports = bugReports.filter(bug => bug[0] !== idToDelete);
+    const title = document.createElement("p");
+    title.textContent = bugReports[i][1];
 
-  // Re-sauvegarde + re-render
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(bugReports));
-  renderList();
-});
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.textContent = "Delete";
+    btn.dataset.id = bugReports[i][0]; // ID caché
+    btn.addEventListener("click", function () {
+      const id = Number(btn.dataset.id);
+      bugReports = bugReports.filter(bug => bug[0] !== id);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(bugReports));
+      renderList();
+    });
 
-
+    row.appendChild(title);
+    row.appendChild(btn);
+    listSpot.appendChild(row);
+  }
+}
 
